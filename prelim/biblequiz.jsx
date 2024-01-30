@@ -33,7 +33,7 @@ function TrueOrFalse(props) {
 export default function Result() {
     return (
         <div>
-            <TrueOrFalsw isTrue={false}
+            <TrueOrFalse isTrue={false}
             />
         </div>
     );
