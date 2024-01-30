@@ -1,7 +1,6 @@
 // Ed Marie May Macapagal
 
-import Result from './component/biblequiz'
-import BibleQuiz from './biblequiz'
+import Result from './biblequiz'
 import './App.css'
 
 function App() {
@@ -9,8 +8,8 @@ function App() {
   return (
     <>
       <div>
+        <h1>The Bible Quiz</h1>
         <Result />
-        <BibleQuiz/>
       </div>
     </>
   )
