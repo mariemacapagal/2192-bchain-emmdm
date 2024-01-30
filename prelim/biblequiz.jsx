@@ -1,35 +1,40 @@
-import React from 'react';
+function showTrue() {
+    return (
+        <h3>The Bible consists of the Old and New Testaments.</h3>
+        <h4 class="correct">Correct!</h4>
+        <h3>Mosses led the Israelites out of Egypt.</h3>
+        <h4 class="correct">Correct!</h4>
+        <h3>The Sermon on the Mount is found in the Book of Luke.</h3>
+        <h4 class="incorrect">Incorrect!<h4>
+    );
+}
 
-const ListItem = ({ item, status }) => {
-const textColor = status === 'correct' ? 'red' : status === 'incorrect' ? 'pink' : '';
+function showFalse() {
+    return (
+        <h3>The Bible consists of the Old and New Testaments.</h3>
+        <h3>Mosses led the Israelites out of Egypt.</h3>
+        <h3>The Sermon on the Mount is found in the Book of Luke.</h3>
+        )
+}
 
-return (
-<li style={{ backgroundColor, listStyleType: 'none', padding: '8px', margin: '4px' }}>
-{item}
-</li>
-);
-};
+function TrueOrFalse(props) {
+    const isTrue = props.isTrue;
+    if (isTrue) {
+        return (
+            <showTrue />
+        );
+    }
+    return (
+        <showFalse />
+    );
+}
 
-const ListComponent = ({ list, listStatus }) => {
-return (
-<ul>
-{list.map((item, index) => (
-<ListItem key={index} item={item} status={listStatus[index]} />
-))}
-</ul>
-);
-};
 
-const Result = () => {
-const myList = ['The Bible consists of the Old and New Testaments.', 'Mosses led the Israelites out of Egypt.', 'The Sermon on the Mount is found in the Book of Luke.'];
-const myStatusList = ['correct', 'correct', 'incorrect'];
-
-return (
-<div>
-<h1>The Bible Quiz</h1>
-<ListComponent list={myList} listStatus={myStatusList} />
-</div>
-);
-};
-
-export default BibleQuiz;
+export default function Result() {
+    return (
+        <div>
+            <TrueOrFalsw isTrue={false}
+            />
+        </div>
+    );
+}
